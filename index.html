@@ -38,6 +38,13 @@ button{
 .yes{background:white;color:#ff4d88;}
 .no{background:#ff4d88;color:white;position:absolute;}
 
+.puppy{
+  width:120px;
+  margin-top:10px;
+  border-radius:15px;
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
 .heart{
   position:absolute;
   color:white;
@@ -72,6 +79,9 @@ You are my world and I never want to lose you.
 Please forgive me and give me one more chance ❤️
 </p>
 
+<!-- 🐶 Puppy -->
+<img src="puppy.png" class="puppy">
+
 <button class="yes" onclick="forgive()">Yes I forgive ❤️</button>
 <button class="no" id="no">No 😠</button>
 
@@ -81,16 +91,19 @@ Please forgive me and give me one more chance ❤️
 <script>
 document.body.onclick=()=>music.play();
 
-// running NO button 😂
+// running NO button
 var no=document.getElementById("no");
 no.onmouseover=function(){
  no.style.top=Math.random()*80+"%";
  no.style.left=Math.random()*80+"%";
 }
 
-// forgive msg
+// yes button
 function forgive(){
  document.getElementById("msg").innerHTML="Yay 😭❤️ I love you forever Jaann!";
+ setTimeout(()=>{
+   alert("Thank you for forgiving me 💗\nYou are my forever and always 🥺❤️");
+ },500);
 }
 
 // floating hearts
